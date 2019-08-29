@@ -20,7 +20,7 @@ provider:
   region: us-east-2
   excludeDevDependencies: true
   environment:
-    DYNAMODB_TABLE: moneyou
+    DYNAMO_TABLE: moneyou
   iamRoleStatements:
     - Effect: "Allow"
       Action:
