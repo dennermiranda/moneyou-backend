@@ -39,6 +39,8 @@
     "joi": "^14.3.1",
     "joi-date-extensions": "^1.2.0",
     "middy": "^0.25.0",
+    "serverless-dynamodb-client": "0.0.2",
+    "serverless-dynamodb-local": "^0.2.38",
     "uuid": "^3.3.3"
   }
 }

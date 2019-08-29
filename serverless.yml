@@ -11,7 +11,13 @@ provider:
   iamRoleStatements:
     - Effect: "Allow"
       Action:
-        - "s3:*"
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: 'arn:aws:dynamodb:us-east-2:*:*'
 package:
   exclude:
     - "local-infra/**"
@@ -36,3 +42,23 @@ functions:
 plugins:
 - serverless-offline # adding the plugin to be able to run the offline emulation
 - serverless-mocha-plugin
+- serverless-dynamodb-local
+
+resources:
+  Resources:
+    MoneyouDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          -
+            AttributeName: id
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${env:DYNAMO_TABLE}

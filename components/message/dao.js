@@ -1,13 +1,16 @@
 const db			= require('@moneyou/lib/db');
-const Project	    = require('@moneyou/models/project');
+const Message	    = require('@moneyou/models/message');
 
 module.exports = {
-	create: async bookData => {
-        await db.connect();
-		return Project.create(bookData);
+	create: async data => {
+		const params = {
+			TableName: Message.tableName,
+			Item: data
+		};
+		return db.put(params);
 	},
-	getById: async id => {
+	getByRecipient: async id => {
 		await db.connect();
-        return Project.findById(id);
+        return Message.findById(id);
 	},
 };

@@ -1,6 +1,5 @@
 const validation            = require('./validation');
 const messageDAO            = require('./dao');
-const moment                = require('moment');
 
 const ValidationError       = require('./errors/validation');
 
