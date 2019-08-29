@@ -7,8 +7,8 @@ functionInit.global();
 module.exports.send = async (event, context) => {
     try {
         functionInit.onCall(event, context);
-        const project = await controller.create(event.body);
-        return api.jsonResponse(200, project);
+        const message = await controller.send(event.body);
+        return api.jsonResponse(200, message);
     } catch (error) {
         return api.jsonResponse(error.status || 500, error);
     }

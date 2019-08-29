@@ -10,5 +10,8 @@ module.exports = {
 			throw new ValidationError(validationResult.error);
         }
         return messageDAO.create(validationResult.value);
+    },
+    getByRecipient: (recipient) => {
+        return messageDAO.getByRecipient(recipient);
     }
 };

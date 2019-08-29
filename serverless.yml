@@ -19,6 +19,8 @@ provider:
   stage: dev # setting the env stage to dev, this will be visible in the routes
   region: us-east-2
   excludeDevDependencies: true
+  environment:
+    DYNAMODB_TABLE: moneyou
   iamRoleStatements:
     - Effect: "Allow"
       Action:
