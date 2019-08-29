@@ -1,0 +1,44 @@
+{
+  "name": "barcelona-showcase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "sls invoke test",
+    "local": "NODE_ENV=local ./node_modules/.bin/nodemon ./node_modules/.bin/sls offline start --skipCacheInvalidation",
+    "setup": "node scripts/setup.js",
+    "lint": "node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.sngular.com/joseluis.sanchez/barcelona-showcase.git"
+  },
+  "keywords": [],
+  "author": "Sngular Barcelona",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.399.0",
+    "chalk": "^2.4.2",
+    "eslint": "^5.12.1",
+    "eslint-plugin-import": "^2.16.0",
+    "figlet": "^1.2.1",
+    "git-branch-is": "^2.1.0",
+    "husky": "^1.3.1",
+    "inquirer": "^6.2.1",
+    "nodemon": "^1.18.9",
+    "serverless": "^1.41.1",
+    "serverless-mocha-plugin": "^1.9.2",
+    "serverless-offline": "^4.2.0",
+    "shelljs": "^0.8.3"
+  },
+  "dependencies": {
+    "@moneyou/lib": "file:lib",
+    "@moneyou/models": "file:models",
+    "config": "^3.0.1",
+    "dotenv": "^6.2.0",
+    "joi": "^14.3.1",
+    "joi-date-extensions": "^1.2.0",
+    "middy": "^0.25.0",
+    "mongoose": "^5.4.7"
+  }
+}
