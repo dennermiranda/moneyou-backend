@@ -1,5 +1,16 @@
 service: moneyou-backend
 
+custom:
+  dynamodb:
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+    migration:
+      dir: offline/migrations
+    stages:
+     - dev
+
 provider:
   name: aws
   runtime: nodejs10.x
@@ -28,14 +39,14 @@ functions:
     handler: components/message/handler.send # point to exported create function in handler.js
     events:
       - http:
-          path: messages # path will be domain.name.com/dev/notes
+          path: message
           method: post
           cors: true
   getByRecipient:
     handler: components/message/handler.getByRecipient
     events:
       - http:
-          path: message/recipient/{recipient} # path will be domain.name.com/dev/notes/1
+          path: messages/recipient/{recipient} 
           method: get
           cors: true
 
