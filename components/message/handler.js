@@ -1,4 +1,5 @@
 const functionInit  = require('@moneyou/lib/function-init');
+const api           = require('@moneyou/lib/api');
 const controller    = require('./controller');
 
 functionInit.global();

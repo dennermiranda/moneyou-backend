@@ -1,5 +1,5 @@
 {
-  "name": "barcelona-showcase",
+  "name": "moneyou",
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.sngular.com/joseluis.sanchez/barcelona-showcase.git"
+    "url": "https://github.com/dennermiranda/moneyou-backend.git"
   },
   "keywords": [],
-  "author": "Sngular Barcelona",
+  "author": "Dener Miranda",
   "license": "ISC",
   "devDependencies": {
     "aws-sdk": "^2.399.0",
@@ -39,6 +39,6 @@
     "joi": "^14.3.1",
     "joi-date-extensions": "^1.2.0",
     "middy": "^0.25.0",
-    "mongoose": "^5.4.7"
+    "uuid": "^3.3.3"
   }
 }
