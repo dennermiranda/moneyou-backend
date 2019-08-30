@@ -10,8 +10,8 @@ const messageSchema = Joi.object().keys({
     phoneNumber: Joi.string(),
     email: Joi.string(),
     subject: Joi.string(),
-    content: Joi.string(),
-    recipient: Joi.string(),
+    content: Joi.string().required(),
+    recipient: Joi.string().required(),
 });
 
 module.exports = {
