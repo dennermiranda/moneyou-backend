@@ -18,11 +18,15 @@ module.exports = {
             });
 		});
 	},
-	getByRecipient: async id => {
+	getByRecipient: async recipient => {
 		const params = {
 			TableName: process.env.DYNAMO_TABLE,
+			FilterExpression: 'recipient = :recipient',
+			ExpressionAttributeValues: {
+				':recipient': recipient
+			}
 		};
-		return new Promise ((resolve, reject) => {
+		const result = await new Promise ((resolve, reject) => {
 			db.scan(params, function(err, result) {
                 if (err){
                     reject(err);
@@ -31,5 +35,6 @@ module.exports = {
                 }
             });
 		});
+		return result.Items.map(result => Message.create(result));
 	},
 };

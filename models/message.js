@@ -15,6 +15,7 @@ module.exports = {
 		object.content         = json.content;
 		object.createdAt       = json.createdAt || timestamp;
 		object.updatedAt       = json.updatedAt || timestamp;
+		object.recipient       = json.recipient;
 		return object;
 	}
 };

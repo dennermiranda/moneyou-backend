@@ -16,7 +16,6 @@ module.exports = {
 			throw new ValidationError(validationResult.error);
         }
         const message = Message.create(validationResult.value);
-        console.log(message);
         if (message.recipientTypes.includes(SMS_DEFAULT_IDENTIFIER)) {
             await sns.sendSMS(message.phoneNumber, message.content);
         }
