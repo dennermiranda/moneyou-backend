@@ -5,7 +5,6 @@
   "main": "handler.js",
   "scripts": {
     "test": "sls invoke test",
-    "local": "NODE_ENV=local ./node_modules/.bin/nodemon ./node_modules/.bin/sls offline start --skipCacheInvalidation",
     "setup": "node scripts/setup.js",
     "lint": "node_modules/.bin/eslint ."
   },
