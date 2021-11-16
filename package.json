@@ -16,7 +16,7 @@
   "author": "Dener Miranda",
   "license": "ISC",
   "devDependencies": {
-    "aws-sdk": "^2.399.0",
+    "aws-sdk": "^2.814.0",
     "chalk": "^2.4.2",
     "eslint": "^5.12.1",
     "eslint-plugin-import": "^2.16.0",
