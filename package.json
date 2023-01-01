@@ -33,7 +33,7 @@
   "dependencies": {
     "@moneyou/lib": "file:lib",
     "@moneyou/models": "file:models",
-    "config": "^3.0.1",
+    "config": "^3.3.8",
     "dotenv": "^6.2.0",
     "joi": "^14.3.1",
     "joi-date-extensions": "^1.2.0",
